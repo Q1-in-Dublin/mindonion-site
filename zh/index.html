@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MindOnion</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap');
 
   :root {
     --bg: #0F1117;
@@ -30,12 +30,12 @@
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: "Karla", -apple-system, sans-serif;
+    font-family: "Karla", "Noto Sans SC", -apple-system, sans-serif;
     font-size: 17px;
-    line-height: 1.6;
+    line-height: 1.8;
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, .display { font-family: "Fraunces", Georgia, serif; text-wrap: balance; }
+  h1, h2, h3, .display { font-family: "Fraunces", "Noto Sans SC", Georgia, serif; text-wrap: balance; }
   .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; }
   a { color: inherit; }
   img, svg { max-width: 100%; }
@@ -58,10 +58,6 @@
   .brand-mark { width: 24px; height: 24px; border-radius: 50%; background: var(--accent-soft); display: flex; align-items: center; justify-content: center; }
   .brand-mark::after { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--warm); }
   .brand-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 17px; letter-spacing: -0.01em; }
-  .nav-pill {
-    font-size: 12.5px; font-family: "IBM Plex Mono", monospace; color: var(--text-dim);
-    border: 1px solid var(--border); border-radius: 20px; padding: 6px 14px;
-  }
   .lang-switch { display: flex; gap: 10px; align-items: center; }
   .lang-switch a { font-size: 12.5px; font-family: "IBM Plex Mono", monospace; color: var(--text-faint); text-decoration: none; border: 1px solid var(--border); border-radius: 20px; padding: 6px 12px; }
   .lang-switch a.current { color: var(--warm); border-color: var(--accent-line); }
@@ -71,7 +67,7 @@
   .hero { padding: 96px 0 72px; text-align: center; }
   .eyebrow {
     display: inline-flex; align-items: center; gap: 8px;
-    font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.06em;
+    font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.02em;
     color: var(--text-dim); border: 1px solid var(--border); border-radius: 20px;
     padding: 6px 14px; margin-bottom: 36px;
   }
@@ -87,18 +83,18 @@
   @keyframes breathe2 { 0%,100% { transform: translate(-50%,-50%) scale(1); } 50% { transform: translate(-50%,-50%) scale(1.12); } }
   @keyframes breathe3 { 0%,100% { transform: translate(-50%,-50%) scale(1); } 50% { transform: translate(-50%,-50%) scale(1.15); } }
 
-  .hero h1 { font-size: clamp(34px, 5.4vw, 58px); font-weight: 600; margin: 0 auto 18px; max-width: 15ch; line-height: 1.08; letter-spacing: -0.01em; }
-  .hero .sub { color: var(--text-dim); font-size: 19px; max-width: 46ch; margin: 0 auto 40px; }
+  .hero h1 { font-size: clamp(30px, 5vw, 50px); font-weight: 600; margin: 0 auto 18px; max-width: 16ch; line-height: 1.4; letter-spacing: 0.01em; }
+  .hero .sub { color: var(--text-dim); font-size: 18px; max-width: 34ch; margin: 0 auto 40px; }
 
   .rings-caption {
-    font-family: "Fraunces", serif; font-style: italic; font-weight: 500;
-    font-size: 15px; color: var(--warm); margin: 0 0 28px; opacity: 0.85;
+    font-family: "Fraunces", "Noto Sans SC", serif; font-style: italic; font-weight: 500;
+    font-size: 14.5px; color: var(--warm); margin: 0 0 28px; opacity: 0.85;
   }
 
   .cta-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px; }
   .btn-primary {
     display: inline-block; background: var(--accent); color: #fff; text-decoration: none;
-    font-family: "Karla", sans-serif; font-weight: 600; font-size: 15.5px;
+    font-family: "Karla", "Noto Sans SC", sans-serif; font-weight: 600; font-size: 15.5px;
     padding: 15px 30px; border-radius: 12px; transition: transform 0.15s ease, opacity 0.15s ease;
   }
   .btn-primary:hover { transform: translateY(-1px); opacity: 0.92; }
@@ -107,28 +103,28 @@
   /* ---------- Sections generic ---------- */
   section { padding: 88px 0; }
   .section-border-top { border-top: 1px solid var(--border); }
-  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--warm); margin-bottom: 18px; display: block; }
+  .kicker { font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.04em; color: var(--warm); margin-bottom: 18px; display: block; }
 
   /* ---------- Problem / pull quote ---------- */
   .pullquote { text-align: center; }
   .pullquote p.display {
-    font-size: clamp(24px, 3.6vw, 38px); font-weight: 500; font-style: italic;
-    line-height: 1.35; color: var(--text); margin: 0 0 22px;
+    font-size: clamp(22px, 3.2vw, 32px); font-weight: 500; font-style: italic;
+    line-height: 1.65; color: var(--text); margin: 0 0 22px;
   }
   .pullquote .attribution { color: var(--text-faint); font-size: 14.5px; }
 
   .story { text-align: left; }
   .story .kicker { text-align: center; display: block; }
   .story p {
-    font-size: clamp(18px, 2.2vw, 21px); line-height: 1.65; color: var(--text);
+    font-size: clamp(17px, 2vw, 19px); line-height: 1.9; color: var(--text);
     margin: 0 0 22px; text-align: center;
   }
-  .story p em { font-style: italic; color: var(--warm); }
+  .story p em { font-style: normal; color: var(--warm); }
   .story .attribution { color: var(--text-faint); font-size: 14.5px; text-align: center; margin-top: 8px; }
   .story .invite {
-    font-family: "Fraunces", serif; font-style: italic; font-weight: 500;
-    font-size: clamp(19px, 2.4vw, 23px); color: var(--warm); text-align: center;
-    margin: 28px auto 0; max-width: 32ch; line-height: 1.5;
+    font-family: "Fraunces", "Noto Sans SC", serif; font-style: italic; font-weight: 500;
+    font-size: clamp(18px, 2.2vw, 21px); color: var(--warm); text-align: center;
+    margin: 28px auto 0; max-width: 30ch; line-height: 1.8;
   }
 
   /* ---------- How it works ---------- */
@@ -136,12 +132,14 @@
   .step {
     display: grid; grid-template-columns: 64px 1fr; gap: 24px;
     padding: 28px 0; border-top: 1px solid var(--border);
+    opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease;
   }
+  .step.in-view { opacity: 1; transform: translateY(0); }
   .step:last-child { border-bottom: 1px solid var(--border); }
   .step-ring { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--surface-2); border: 1px solid var(--border); }
   .step-ring .num { font-family: "IBM Plex Mono", monospace; font-size: 13px; color: var(--warm); }
-  .step h3 { font-size: 20px; margin: 0 0 6px; font-weight: 600; }
-  .step p { color: var(--text-dim); margin: 0; font-size: 15.5px; }
+  .step h3 { font-size: 19px; margin: 0 0 6px; font-weight: 600; }
+  .step p { color: var(--text-dim); margin: 0; font-size: 15px; }
 
   /* ---------- Two paths ---------- */
   .paths { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 48px; }
@@ -150,32 +148,32 @@
     padding: 32px 28px; box-shadow: var(--shadow);
   }
   .path-card .tag { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.05em; }
-  .path-card h3 { font-size: 22px; margin: 10px 0 12px; }
-  .path-card p { color: var(--text-dim); margin: 0; font-size: 15px; }
+  .path-card h3 { font-size: 21px; margin: 10px 0 12px; }
+  .path-card p { color: var(--text-dim); margin: 0; font-size: 14.5px; }
   .path-card.explore { border-color: var(--accent-line); }
 
   /* ---------- Privacy band ---------- */
   .privacy-band { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
   .privacy-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
-  .privacy-band h2 { font-size: clamp(28px, 3.6vw, 40px); margin: 0 0 18px; line-height: 1.15; }
-  .privacy-band .lede { color: var(--text-dim); font-size: 17px; margin: 0 0 28px; max-width: 42ch; }
+  .privacy-band h2 { font-size: clamp(26px, 3.2vw, 36px); margin: 0 0 18px; line-height: 1.4; }
+  .privacy-band .lede { color: var(--text-dim); font-size: 16.5px; margin: 0 0 28px; max-width: 34ch; }
   .privacy-facts { display: flex; flex-direction: column; gap: 0; }
   .privacy-fact { display: flex; gap: 14px; padding: 16px 0; border-top: 1px solid var(--border); }
   .privacy-fact:last-child { padding-bottom: 0; }
   .privacy-fact .check { color: var(--warm); font-family: "IBM Plex Mono", monospace; font-size: 14px; margin-top: 2px; }
   .privacy-fact div p { margin: 0; }
   .privacy-fact .fact-title { color: var(--text); font-weight: 600; font-size: 15px; margin-bottom: 3px; }
-  .privacy-fact .fact-body { color: var(--text-dim); font-size: 14px; }
+  .privacy-fact .fact-body { color: var(--text-dim); font-size: 13.5px; }
   .privacy-closer {
     grid-column: 1 / -1; margin: 44px auto 0; padding-top: 30px; border-top: 1px solid var(--border);
-    font-family: "Fraunces", serif; font-style: italic; font-weight: 500;
-    font-size: clamp(18px, 2vw, 21px); color: var(--warm); text-align: center; max-width: 56ch;
+    font-family: "Fraunces", "Noto Sans SC", serif; font-style: italic; font-weight: 500;
+    font-size: clamp(17px, 1.9vw, 20px); color: var(--warm); text-align: center; max-width: 48ch;
   }
 
   /* ---------- Vault/Patterns mock ---------- */
   .mock-card {
     background: var(--surface-2); border: 1px solid var(--border); border-radius: 16px;
-    padding: 24px; font-family: "Karla", sans-serif;
+    padding: 24px; font-family: "Karla", "Noto Sans SC", sans-serif;
   }
   .mock-card .mock-title { font-weight: 600; font-size: 15px; margin-bottom: 4px; }
   .mock-label { color: var(--text-faint); font-size: 12px; margin-bottom: 14px; }
@@ -192,7 +190,7 @@
   .lang-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin-top: 48px; }
   .lang-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
   .lang-card .lang-name { font-family: "IBM Plex Mono", monospace; font-size: 11.5px; color: var(--warm); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 10px; }
-  .lang-card .lang-phrase { font-size: 15.5px; color: var(--text); line-height: 1.5; }
+  .lang-card .lang-phrase { font-size: 15px; color: var(--text); line-height: 1.7; }
 
   /* ---------- Safety ---------- */
   .safety-card {
@@ -201,27 +199,27 @@
   }
   .safety-icon { width: 44px; height: 44px; border-radius: 50%; background: var(--warm-soft); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .safety-icon .dot { width: 16px; height: 16px; border-radius: 50%; background: var(--warm); }
-  .safety-card h3 { margin: 0 0 8px; font-size: 19px; }
-  .safety-card p { margin: 0; color: var(--text-dim); font-size: 15px; }
+  .safety-card h3 { margin: 0 0 8px; font-size: 18px; }
+  .safety-card p { margin: 0; color: var(--text-dim); font-size: 14.5px; }
 
   /* ---------- Pricing ---------- */
   .pricing-card {
     max-width: 460px; margin: 48px auto 0; background: var(--surface); border: 1px solid var(--accent-line);
     border-radius: 20px; padding: 40px 36px; text-align: center; box-shadow: var(--shadow);
   }
-  .pricing-card .price { font-family: "Fraunces", serif; font-size: 56px; font-weight: 600; margin: 6px 0 2px; }
-  .pricing-card .price-note { color: var(--text-faint); font-size: 13.5px; margin-bottom: 28px; }
+  .pricing-card .price { font-family: "Fraunces", serif; font-size: 52px; font-weight: 600; margin: 6px 0 2px; }
+  .pricing-card .price-note { color: var(--text-faint); font-size: 13px; margin-bottom: 28px; }
   .pricing-list { list-style: none; padding: 0; margin: 0 0 30px; text-align: left; display: flex; flex-direction: column; gap: 12px; }
-  .pricing-list li { display: flex; gap: 10px; font-size: 15px; color: var(--text-dim); }
+  .pricing-list li { display: flex; gap: 10px; font-size: 14.5px; color: var(--text-dim); }
   .pricing-list li .mark { color: var(--warm); flex-shrink: 0; }
-  .pricing-free { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 13.5px; color: var(--text-faint); }
+  .pricing-free { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-faint); }
 
   /* ---------- Footer ---------- */
   footer { padding: 72px 0 60px; border-top: 1px solid var(--border); }
   .footer-question {
-    font-family: "Fraunces", serif; font-style: italic; font-weight: 500;
-    font-size: clamp(22px, 3.2vw, 32px); text-align: center; max-width: 22ch;
-    margin: 0 auto 64px; line-height: 1.35; color: var(--text);
+    font-family: "Fraunces", "Noto Sans SC", serif; font-style: italic; font-weight: 500;
+    font-size: clamp(20px, 2.8vw, 28px); text-align: center; max-width: 22ch;
+    margin: 0 auto 64px; line-height: 1.6; color: var(--text);
   }
   .footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 28px; }
   .footer-tagline { color: var(--text-faint); font-size: 13.5px; max-width: 32ch; margin-top: 10px; }
@@ -247,9 +245,9 @@
       <div class="brand-name">MindOnion</div>
     </div>
     <div class="lang-switch">
-      <a class="current" href="#">EN</a>
+      <a href="/">EN</a>
       <a href="/ja/">日本語</a>
-      <a href="/zh/">中文</a>
+      <a class="current" href="#">中文</a>
       <a href="/es/">ES</a>
       <a href="/pt/">PT</a>
     </div>
@@ -257,62 +255,62 @@
 </nav>
 
 <header class="hero wrap">
-  <div class="eyebrow"><span class="dot"></span>No AI · No server · No account</div>
+  <div class="eyebrow"><span class="dot"></span>无AI · 无服务器 · 无账号</div>
 
   <div class="rings">
     <div class="ring ring-outer"></div>
     <div class="ring ring-mid"></div>
     <div class="ring ring-core"></div>
   </div>
-  <p class="rings-caption">Feelings, like onions, reveal themselves one layer at a time.</p>
+  <p class="rings-caption">情绪就像洋葱，只会一层一层地显露真相。</p>
 
-  <h1>Your hurt deserves to be understood.</h1>
-  <p class="sub">Peel back the feeling. Find what really hurt, one layer at a time, entirely on your own phone.</p>
+  <h1>你的伤痛，值得被理解。</h1>
+  <p class="sub">一层层剥开情绪，找到真正让你受伤的东西，全程只在你自己的手机上完成。</p>
 
   <div class="cta-row">
-    <a class="btn-primary" href="mailto:themindonion@gmail.com?subject=Notify%20me%20when%20MindOnion%20launches">Get notified at launch</a>
+    <a class="btn-primary" href="mailto:themindonion@gmail.com?subject=Notify%20me%20when%20MindOnion%20launches">上线时通知我</a>
   </div>
-  <p class="cta-note" style="margin-top:16px;">Launching soon on iOS and Android · $19.99 once, not a subscription</p>
+  <p class="cta-note" style="margin-top:16px;">即将登陆 iOS 和 Android · 一次性 $19.99，不是订阅</p>
 </header>
 
 <section class="section-border-top">
   <div class="narrow story">
-    <span class="kicker">Such a long day</span>
-    <p>You say you're sad. You say you're angry. Two words, and the day moves on without you.</p>
-    <p>But underneath <em>I'm just sad</em> is something with a real shape: a moment, a sentence you haven't said out loud yet. MindOnion helps you find it, so you can stand in front of what's actually there, not just the weather of it.</p>
-    <p class="attribution">Psychologists call this affect labeling: naming the real cause of a feeling is often where it starts to loosen its grip.</p>
-    <p class="invite">Come in when you're sad. Come in when you're angry. That's exactly who this is for.</p>
+    <span class="kicker">这一天，太漫长了</span>
+    <p>你说自己难过。你说自己生气。两个词说完，这一天就自顾自地翻篇了。</p>
+    <p>但<em>「我只是难过」</em>这句话底下，藏着一个真正有形状的东西：一个瞬间，一句你还没说出口的话。MindOnion帮你把它找出来，让你能站在真正的原因面前，而不只是停留在情绪的表面。</p>
+    <p class="attribution">心理学上把这称为情绪标注(affect labeling)：为情绪找到真正的原因并说出来，往往正是它开始松开的地方。</p>
+    <p class="invite">难过的时候，生气的时候。这里就是为这样的时刻而存在的。</p>
   </div>
 </section>
 
 <section class="section-border-top" id="how">
   <div class="wrap">
-    <span class="kicker">How it works</span>
-    <h2 class="display" style="font-size: clamp(26px, 3.4vw, 36px); max-width: 20ch; margin:0;">Five short questions instead of one blank page.</h2>
+    <span class="kicker">怎么用</span>
+    <h2 class="display" style="font-size: clamp(24px, 3.2vw, 32px); max-width: 18ch; margin:0;">不是一张空白的页面，而是五个简短的问题。</h2>
 
     <div class="steps">
-      <div class="step"><div class="step-ring"><span class="num">01</span></div><div><h3>What happened?</h3><p>Say it exactly as it felt. No need to make it fair, calm, or reasonable.</p></div></div>
-      <div class="step"><div class="step-ring"><span class="num">02</span></div><div><h3>What triggered you?</h3><p>The specific moment, not the whole situation.</p></div></div>
-      <div class="step"><div class="step-ring"><span class="num">03</span></div><div><h3>What did you feel?</h3><p>Anger and hurt aren't the same thing as shame or betrayal. Naming the exact one matters.</p></div></div>
-      <div class="step"><div class="step-ring"><span class="num">04</span></div><div><h3>What did you tell yourself?</h3><p>The quiet story you told yourself about what it meant.</p></div></div>
-      <div class="step"><div class="step-ring"><span class="num">05</span></div><div><h3>What did you need?</h3><p>Respect, safety, recognition: the thing underneath the reaction.</p></div></div>
+      <div class="step"><div class="step-ring"><span class="num">01</span></div><div><h3>发生了什么？</h3><p>照你感受到的样子写下来，不需要公平、冷静，也不需要合理。</p></div></div>
+      <div class="step"><div class="step-ring"><span class="num">02</span></div><div><h3>是什么触发了你？</h3><p>是那个具体的瞬间，而不是整件事。</p></div></div>
+      <div class="step"><div class="step-ring"><span class="num">03</span></div><div><h3>你感受到了什么？</h3><p>愤怒和受伤，跟羞耻或被背叛不是一回事。准确说出是哪一种，很重要。</p></div></div>
+      <div class="step"><div class="step-ring"><span class="num">04</span></div><div><h3>你当时对自己说了什么？</h3><p>你悄悄告诉自己，这件事意味着什么。</p></div></div>
+      <div class="step"><div class="step-ring"><span class="num">05</span></div><div><h3>你需要什么？</h3><p>尊重、安全感、被认可：藏在反应底下的那个东西。</p></div></div>
     </div>
   </div>
 </section>
 
 <section class="section-border-top">
   <div class="wrap">
-    <span class="kicker">Two ways in</span>
+    <span class="kicker">两种进入方式</span>
     <div class="paths">
       <div class="path-card">
-        <div class="tag">Quick</div>
-        <h3>Just let it out</h3>
-        <p>Sometimes you don't want to dig. You just want it said. Write it, save it or delete it, done.</p>
+        <div class="tag">快速</div>
+        <h3>只是想说出来</h3>
+        <p>有时候你不想深挖，只想把话说出来。写下来，保存或删除，就这样。</p>
       </div>
       <div class="path-card explore">
-        <div class="tag">Deeper</div>
-        <h3>Understand why it hurt</h3>
-        <p>Walk through all five layers and land on a sentence you can actually recognize as true.</p>
+        <div class="tag">深入</div>
+        <h3>想理解为什么会受伤</h3>
+        <p>走完全部五层，最终落在一句你真正认同的话上。</p>
       </div>
     </div>
   </div>
@@ -321,33 +319,33 @@
 <section class="privacy-band">
   <div class="wrap privacy-grid">
     <div>
-      <span class="kicker">Not a footnote</span>
-      <h2 class="display">Nothing you write ever leaves this phone.</h2>
-      <p class="lede">Most journaling apps are quietly becoming AI companions with a server behind them. MindOnion made the opposite bet.</p>
+      <span class="kicker">不是一句附加说明</span>
+      <h2 class="display">你写下的一切，永远不会离开这部手机。</h2>
+      <p class="lede">很多日记类应用正在悄悄变成背后连着服务器的AI伙伴。MindOnion选择了完全相反的方向。</p>
     </div>
     <div class="privacy-facts">
-      <div class="privacy-fact"><span class="check">•</span><div><p class="fact-title">No AI</p><p class="fact-body">Every question and prompt is fixed, human-written content. Nothing you write is ever sent to a model.</p></div></div>
-      <div class="privacy-fact"><span class="check">•</span><div><p class="fact-title">No server</p><p class="fact-body">There's nowhere for your data to go. It's not a promise about a database. There isn't one.</p></div></div>
-      <div class="privacy-fact"><span class="check">•</span><div><p class="fact-title">No account</p><p class="fact-body">Nothing to sign up for, nothing to lose the password to.</p></div></div>
-      <div class="privacy-fact"><span class="check">•</span><div><p class="fact-title">Yours to keep</p><p class="fact-body">Export everything to a file, anytime, and bring it back in later. Delete it permanently just as easily.</p></div></div>
+      <div class="privacy-fact"><span class="check">•</span><div><p class="fact-title">不使用AI</p><p class="fact-body">每一个问题和提示语都是提前由人写好的固定内容。你写的东西不会被发送给任何模型。</p></div></div>
+      <div class="privacy-fact"><span class="check">•</span><div><p class="fact-title">没有服务器</p><p class="fact-body">你的数据根本无处可去。这不是一句关于数据库的承诺，而是压根不存在数据库。</p></div></div>
+      <div class="privacy-fact"><span class="check">•</span><div><p class="fact-title">无需账号</p><p class="fact-body">不用注册什么，也没有密码可以忘记。</p></div></div>
+      <div class="privacy-fact"><span class="check">•</span><div><p class="fact-title">始终属于你</p><p class="fact-body">随时可以导出成文件，以后再导入回来。要彻底删除同样简单。</p></div></div>
     </div>
-    <p class="privacy-closer">A service built to respect your privacy completely. No AI, not even a little. Just you, listening to what's actually going on inside.</p>
+    <p class="privacy-closer">这是一个把隐私放在第一位的产品。一点AI都不用。只有你，在认真听自己内心真正在发生什么。</p>
   </div>
 </section>
 
 <section class="section-border-top">
   <div class="wrap" style="display:grid; grid-template-columns: 1fr 1fr; gap:56px; align-items:center;">
     <div>
-      <span class="kicker">Vault &amp; Patterns</span>
-      <h2 class="display" style="font-size: clamp(26px,3.4vw,36px); margin:0 0 16px;">Not a diary of what happened.</h2>
-      <p style="color:var(--text-dim); font-size:16.5px; max-width:40ch; margin:0;">A map of what keeps happening, and what you keep needing, built from your own record, not a guess.</p>
+      <span class="kicker">Vault 与 模式</span>
+      <h2 class="display" style="font-size: clamp(24px,3.2vw,32px); margin:0 0 16px;">这不是记录发生了什么的日记。</h2>
+      <p style="color:var(--text-dim); font-size:16px; max-width:34ch; margin:0;">这是一张地图，记录反复出现的事和你反复需要的东西，来自你自己的真实记录，而不是猜测。</p>
     </div>
     <div class="mock-card">
-      <div class="mock-title">Then vs. now</div>
-      <div class="mock-label">On revisit, intensity dropped by an average of 3.4 points</div>
-      <div class="bar-row"><span class="bar-label">Then</span><div class="bar-track"><div class="bar-fill then" style="width:78%;"></div></div><span class="bar-value">7.8</span></div>
-      <div class="bar-row"><span class="bar-label">Now</span><div class="bar-track"><div class="bar-fill now" style="width:44%;"></div></div><span class="bar-value">4.4</span></div>
-      <div class="mock-example">Example data for illustration</div>
+      <div class="mock-title">当时 vs 现在</div>
+      <div class="mock-label">回顾时，强度平均下降了3.4分</div>
+      <div class="bar-row"><span class="bar-label">当时</span><div class="bar-track"><div class="bar-fill then" style="width:78%;"></div></div><span class="bar-value">7.8</span></div>
+      <div class="bar-row"><span class="bar-label">现在</span><div class="bar-track"><div class="bar-fill now" style="width:44%;"></div></div><span class="bar-value">4.4</span></div>
+      <div class="mock-example">示意用的示例数据</div>
     </div>
   </div>
 </section>
@@ -357,8 +355,8 @@
     <div class="safety-card">
       <div class="safety-icon"><div class="dot"></div></div>
       <div>
-        <h3>A quiet safety net, built in</h3>
-        <p>If something you write suggests you might be in crisis, MindOnion shows you free, confidential support resources for your language. Never a diagnosis, never a blocker, just there if it's needed.</p>
+        <h3>内置的、安静的安全网</h3>
+        <p>如果你写下的内容显示你可能正处于危机中，MindOnion会为你展示适合你所用语言的免费保密求助资源。这不是诊断，也不会打断你，只是在需要的时候提供帮助。</p>
       </div>
     </div>
   </div>
@@ -366,7 +364,7 @@
 
 <section class="section-border-top">
   <div class="wrap">
-    <span class="kicker" style="text-align:center; display:block;">Available in five languages at launch</span>
+    <span class="kicker" style="text-align:center; display:block;">上线即支持五种语言</span>
     <div class="lang-grid">
       <div class="lang-card"><div class="lang-name">English</div><div class="lang-phrase">Your hurt deserves to be understood.</div></div>
       <div class="lang-card"><div class="lang-name">日本語</div><div class="lang-phrase">あなたの痛みは、理解されるべきものです。</div></div>
@@ -379,46 +377,46 @@
 
 <section class="section-border-top">
   <div class="narrow pullquote">
-    <span class="kicker" style="display:block; text-align:center;">One way to think about it</span>
-    <p class="display">Maybe that's what loving yourself really is: understanding what you feel, all the way through, and accepting it.</p>
-    <p class="attribution">Once you do, the feeling finally belongs to you.</p>
+    <span class="kicker" style="display:block; text-align:center;">或许可以这样理解</span>
+    <p class="display">也许这就是爱自己真正的样子：把自己的感受完整地理解一遍，然后接受它。</p>
+    <p class="attribution">做到这一步，这份感受才真正属于你。</p>
   </div>
 </section>
 
 <section class="section-border-top" id="pricing">
   <div class="wrap" style="text-align:center;">
-    <span class="kicker">Pricing</span>
-    <h2 class="display" style="font-size: clamp(26px,3.4vw,36px); margin:0;">One payment. No subscription, ever.</h2>
+    <span class="kicker">价格</span>
+    <h2 class="display" style="font-size: clamp(24px,3.2vw,32px); margin:0;">一次性付费，永不订阅。</h2>
 
     <div class="pricing-card">
-      <div class="mono" style="color:var(--text-faint); font-size:12.5px; letter-spacing:0.05em; text-transform:uppercase;">Lifetime access</div>
+      <div class="mono" style="color:var(--text-faint); font-size:12px; letter-spacing:0.02em;">Lifetime 权限</div>
       <div class="price">$19.99</div>
-      <div class="price-note">once, not per month, not per year</div>
+      <div class="price-note">只需一次，不按月也不按年</div>
       <ul class="pricing-list">
-        <li><span class="mark">•</span> Unlimited entries in your Vault</li>
-        <li><span class="mark">•</span> Patterns: see what keeps coming up</li>
-        <li><span class="mark">•</span> Revisit: check back on how things feel now</li>
+        <li><span class="mark">•</span> Vault无限保存</li>
+        <li><span class="mark">•</span> 模式：看到反复出现的东西</li>
+        <li><span class="mark">•</span> 回顾：看看现在感觉如何</li>
       </ul>
-      <a class="btn-primary" href="mailto:themindonion@gmail.com?subject=Notify%20me%20when%20MindOnion%20launches" style="width:100%;">Get notified at launch</a>
-      <div class="pricing-free">The full core loop (writing, exploring, naming what really hurt, saving up to 3 entries) is free, always. Privacy and deletion tools are never paywalled.</div>
+      <a class="btn-primary" href="mailto:themindonion@gmail.com?subject=Notify%20me%20when%20MindOnion%20launches" style="width:100%;">上线时通知我</a>
+      <div class="pricing-free">完整的核心流程(书写、探索、为真正的伤痛命名、最多保存3条)永远免费。隐私和删除功能永远不会被收费限制。</div>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <p class="footer-question">When was the last time you really listened to what's going on inside you?</p>
+    <p class="footer-question">你上一次真正倾听自己内心的声音，是什么时候？</p>
     <div class="footer-row">
       <div>
         <div class="brand"><div class="brand-mark"></div><div class="brand-name">MindOnion</div></div>
-        <p class="footer-tagline">Peel back the feeling. Find what really hurt.</p>
+        <p class="footer-tagline">一层层剥开情绪，找到真正让你受伤的东西。</p>
       </div>
       <div class="footer-links">
-        <a href="https://q1-in-dublin.github.io/mindonion-legal/">Privacy Policy</a>
-        <a href="mailto:themindonion@gmail.com">Contact</a>
+        <a href="https://q1-in-dublin.github.io/mindonion-legal/">隐私政策</a>
+        <a href="mailto:themindonion@gmail.com">联系我们</a>
       </div>
     </div>
-    <p class="footer-note">MindOnion has no server, so this page can't tell you anything about yourself. It can only tell you about the app.</p>
+    <p class="footer-note">MindOnion没有服务器，所以这个页面无法告诉你任何关于你自己的事，它只能告诉你关于这个应用的事。</p>
   </div>
 </footer>
 
@@ -432,5 +430,4 @@
   steps.forEach(function (s) { io.observe(s); });
 </script>
 
-</body>
-</html>
+</body></html>

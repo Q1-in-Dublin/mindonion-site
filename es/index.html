@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,10 +58,6 @@
   .brand-mark { width: 24px; height: 24px; border-radius: 50%; background: var(--accent-soft); display: flex; align-items: center; justify-content: center; }
   .brand-mark::after { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--warm); }
   .brand-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 17px; letter-spacing: -0.01em; }
-  .nav-pill {
-    font-size: 12.5px; font-family: "IBM Plex Mono", monospace; color: var(--text-dim);
-    border: 1px solid var(--border); border-radius: 20px; padding: 6px 14px;
-  }
   .lang-switch { display: flex; gap: 10px; align-items: center; }
   .lang-switch a { font-size: 12.5px; font-family: "IBM Plex Mono", monospace; color: var(--text-faint); text-decoration: none; border: 1px solid var(--border); border-radius: 20px; padding: 6px 12px; }
   .lang-switch a.current { color: var(--warm); border-color: var(--accent-line); }
@@ -87,7 +83,7 @@
   @keyframes breathe2 { 0%,100% { transform: translate(-50%,-50%) scale(1); } 50% { transform: translate(-50%,-50%) scale(1.12); } }
   @keyframes breathe3 { 0%,100% { transform: translate(-50%,-50%) scale(1); } 50% { transform: translate(-50%,-50%) scale(1.15); } }
 
-  .hero h1 { font-size: clamp(34px, 5.4vw, 58px); font-weight: 600; margin: 0 auto 18px; max-width: 15ch; line-height: 1.08; letter-spacing: -0.01em; }
+  .hero h1 { font-size: clamp(32px, 5vw, 54px); font-weight: 600; margin: 0 auto 18px; max-width: 16ch; line-height: 1.12; letter-spacing: -0.01em; }
   .hero .sub { color: var(--text-dim); font-size: 19px; max-width: 46ch; margin: 0 auto 40px; }
 
   .rings-caption {
@@ -112,23 +108,23 @@
   /* ---------- Problem / pull quote ---------- */
   .pullquote { text-align: center; }
   .pullquote p.display {
-    font-size: clamp(24px, 3.6vw, 38px); font-weight: 500; font-style: italic;
-    line-height: 1.35; color: var(--text); margin: 0 0 22px;
+    font-size: clamp(23px, 3.4vw, 36px); font-weight: 500; font-style: italic;
+    line-height: 1.38; color: var(--text); margin: 0 0 22px;
   }
   .pullquote .attribution { color: var(--text-faint); font-size: 14.5px; }
 
   .story { text-align: left; }
   .story .kicker { text-align: center; display: block; }
   .story p {
-    font-size: clamp(18px, 2.2vw, 21px); line-height: 1.65; color: var(--text);
+    font-size: clamp(17.5px, 2.1vw, 20.5px); line-height: 1.65; color: var(--text);
     margin: 0 0 22px; text-align: center;
   }
   .story p em { font-style: italic; color: var(--warm); }
   .story .attribution { color: var(--text-faint); font-size: 14.5px; text-align: center; margin-top: 8px; }
   .story .invite {
     font-family: "Fraunces", serif; font-style: italic; font-weight: 500;
-    font-size: clamp(19px, 2.4vw, 23px); color: var(--warm); text-align: center;
-    margin: 28px auto 0; max-width: 32ch; line-height: 1.5;
+    font-size: clamp(18px, 2.2vw, 21px); color: var(--warm); text-align: center;
+    margin: 28px auto 0; max-width: 34ch; line-height: 1.5;
   }
 
   /* ---------- How it works ---------- */
@@ -136,7 +132,9 @@
   .step {
     display: grid; grid-template-columns: 64px 1fr; gap: 24px;
     padding: 28px 0; border-top: 1px solid var(--border);
+    opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease;
   }
+  .step.in-view { opacity: 1; transform: translateY(0); }
   .step:last-child { border-bottom: 1px solid var(--border); }
   .step-ring { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--surface-2); border: 1px solid var(--border); }
   .step-ring .num { font-family: "IBM Plex Mono", monospace; font-size: 13px; color: var(--warm); }
@@ -157,7 +155,7 @@
   /* ---------- Privacy band ---------- */
   .privacy-band { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
   .privacy-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
-  .privacy-band h2 { font-size: clamp(28px, 3.6vw, 40px); margin: 0 0 18px; line-height: 1.15; }
+  .privacy-band h2 { font-size: clamp(27px, 3.4vw, 38px); margin: 0 0 18px; line-height: 1.18; }
   .privacy-band .lede { color: var(--text-dim); font-size: 17px; margin: 0 0 28px; max-width: 42ch; }
   .privacy-facts { display: flex; flex-direction: column; gap: 0; }
   .privacy-fact { display: flex; gap: 14px; padding: 16px 0; border-top: 1px solid var(--border); }
@@ -180,7 +178,7 @@
   .mock-card .mock-title { font-weight: 600; font-size: 15px; margin-bottom: 4px; }
   .mock-label { color: var(--text-faint); font-size: 12px; margin-bottom: 14px; }
   .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-  .bar-row .bar-label { width: 40px; font-size: 11.5px; color: var(--text-faint); flex-shrink: 0; }
+  .bar-row .bar-label { width: 44px; font-size: 11.5px; color: var(--text-faint); flex-shrink: 0; }
   .bar-track { flex: 1; height: 8px; border-radius: 6px; background: var(--bg); overflow: hidden; }
   .bar-fill { height: 100%; border-radius: 6px; }
   .bar-fill.then { background: rgba(255,255,255,0.28); }
@@ -220,7 +218,7 @@
   footer { padding: 72px 0 60px; border-top: 1px solid var(--border); }
   .footer-question {
     font-family: "Fraunces", serif; font-style: italic; font-weight: 500;
-    font-size: clamp(22px, 3.2vw, 32px); text-align: center; max-width: 22ch;
+    font-size: clamp(22px, 3.2vw, 32px); text-align: center; max-width: 24ch;
     margin: 0 auto 64px; line-height: 1.35; color: var(--text);
   }
   .footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 28px; }
@@ -247,72 +245,72 @@
       <div class="brand-name">MindOnion</div>
     </div>
     <div class="lang-switch">
-      <a class="current" href="#">EN</a>
+      <a href="/">EN</a>
       <a href="/ja/">日本語</a>
       <a href="/zh/">中文</a>
-      <a href="/es/">ES</a>
+      <a class="current" href="#">ES</a>
       <a href="/pt/">PT</a>
     </div>
   </div>
 </nav>
 
 <header class="hero wrap">
-  <div class="eyebrow"><span class="dot"></span>No AI · No server · No account</div>
+  <div class="eyebrow"><span class="dot"></span>Sin IA · Sin servidor · Sin cuenta</div>
 
   <div class="rings">
     <div class="ring ring-outer"></div>
     <div class="ring ring-mid"></div>
     <div class="ring ring-core"></div>
   </div>
-  <p class="rings-caption">Feelings, like onions, reveal themselves one layer at a time.</p>
+  <p class="rings-caption">Los sentimientos, como las cebollas, se revelan capa a capa.</p>
 
-  <h1>Your hurt deserves to be understood.</h1>
-  <p class="sub">Peel back the feeling. Find what really hurt, one layer at a time, entirely on your own phone.</p>
+  <h1>Tu dolor merece ser comprendido.</h1>
+  <p class="sub">Pela la capa del sentimiento. Descubre qué te dolió de verdad, una capa a la vez, sin salir nunca de tu propio teléfono.</p>
 
   <div class="cta-row">
-    <a class="btn-primary" href="mailto:themindonion@gmail.com?subject=Notify%20me%20when%20MindOnion%20launches">Get notified at launch</a>
+    <a class="btn-primary" href="mailto:themindonion@gmail.com?subject=Notify%20me%20when%20MindOnion%20launches">Avísenme cuando esté disponible</a>
   </div>
-  <p class="cta-note" style="margin-top:16px;">Launching soon on iOS and Android · $19.99 once, not a subscription</p>
+  <p class="cta-note" style="margin-top:16px;">Próximamente en iOS y Android · $19.99 una sola vez, sin suscripción</p>
 </header>
 
 <section class="section-border-top">
   <div class="narrow story">
-    <span class="kicker">Such a long day</span>
-    <p>You say you're sad. You say you're angry. Two words, and the day moves on without you.</p>
-    <p>But underneath <em>I'm just sad</em> is something with a real shape: a moment, a sentence you haven't said out loud yet. MindOnion helps you find it, so you can stand in front of what's actually there, not just the weather of it.</p>
-    <p class="attribution">Psychologists call this affect labeling: naming the real cause of a feeling is often where it starts to loosen its grip.</p>
-    <p class="invite">Come in when you're sad. Come in when you're angry. That's exactly who this is for.</p>
+    <span class="kicker">Un día tan largo</span>
+    <p>Dices que estás triste. Dices que estás enfadado. Dos palabras, y el día sigue sin ti.</p>
+    <p>Pero debajo de <em>solo estoy triste</em> hay algo con una forma real: un momento, una frase que aún no has dicho en voz alta. MindOnion te ayuda a encontrarla, para que puedas situarte frente a lo que realmente hay ahí, no solo frente al clima que lo cubre.</p>
+    <p class="attribution">Los psicólogos lo llaman etiquetado afectivo: nombrar la causa real de un sentimiento suele ser el punto donde empieza a aflojar su control.</p>
+    <p class="invite">Entra cuando estés triste. Entra cuando estés enfadado. Es exactamente para eso.</p>
   </div>
 </section>
 
 <section class="section-border-top" id="how">
   <div class="wrap">
-    <span class="kicker">How it works</span>
-    <h2 class="display" style="font-size: clamp(26px, 3.4vw, 36px); max-width: 20ch; margin:0;">Five short questions instead of one blank page.</h2>
+    <span class="kicker">Cómo funciona</span>
+    <h2 class="display" style="font-size: clamp(26px, 3.4vw, 36px); max-width: 22ch; margin:0;">Cinco preguntas breves en lugar de una página en blanco.</h2>
 
     <div class="steps">
-      <div class="step"><div class="step-ring"><span class="num">01</span></div><div><h3>What happened?</h3><p>Say it exactly as it felt. No need to make it fair, calm, or reasonable.</p></div></div>
-      <div class="step"><div class="step-ring"><span class="num">02</span></div><div><h3>What triggered you?</h3><p>The specific moment, not the whole situation.</p></div></div>
-      <div class="step"><div class="step-ring"><span class="num">03</span></div><div><h3>What did you feel?</h3><p>Anger and hurt aren't the same thing as shame or betrayal. Naming the exact one matters.</p></div></div>
-      <div class="step"><div class="step-ring"><span class="num">04</span></div><div><h3>What did you tell yourself?</h3><p>The quiet story you told yourself about what it meant.</p></div></div>
-      <div class="step"><div class="step-ring"><span class="num">05</span></div><div><h3>What did you need?</h3><p>Respect, safety, recognition: the thing underneath the reaction.</p></div></div>
+      <div class="step"><div class="step-ring"><span class="num">01</span></div><div><h3>¿Qué pasó?</h3><p>Cuéntalo tal como lo sentiste. No hace falta que sea justo, tranquilo o razonable.</p></div></div>
+      <div class="step"><div class="step-ring"><span class="num">02</span></div><div><h3>¿Qué lo desencadenó?</h3><p>El momento concreto, no toda la situación.</p></div></div>
+      <div class="step"><div class="step-ring"><span class="num">03</span></div><div><h3>¿Qué sentiste?</h3><p>La ira y el dolor no son lo mismo que la vergüenza o la traición. Nombrar el correcto importa.</p></div></div>
+      <div class="step"><div class="step-ring"><span class="num">04</span></div><div><h3>¿Qué te dijiste a ti mismo?</h3><p>La historia silenciosa que te contaste sobre lo que significaba.</p></div></div>
+      <div class="step"><div class="step-ring"><span class="num">05</span></div><div><h3>¿Qué necesitabas?</h3><p>Respeto, seguridad, reconocimiento: lo que hay debajo de la reacción.</p></div></div>
     </div>
   </div>
 </section>
 
 <section class="section-border-top">
   <div class="wrap">
-    <span class="kicker">Two ways in</span>
+    <span class="kicker">Dos formas de entrar</span>
     <div class="paths">
       <div class="path-card">
-        <div class="tag">Quick</div>
-        <h3>Just let it out</h3>
-        <p>Sometimes you don't want to dig. You just want it said. Write it, save it or delete it, done.</p>
+        <div class="tag">Rápido</div>
+        <h3>Solo desahogarme</h3>
+        <p>A veces no quieres profundizar. Solo quieres decirlo. Escríbelo, guárdalo o elimínalo, y listo.</p>
       </div>
       <div class="path-card explore">
-        <div class="tag">Deeper</div>
-        <h3>Understand why it hurt</h3>
-        <p>Walk through all five layers and land on a sentence you can actually recognize as true.</p>
+        <div class="tag">Más profundo</div>
+        <h3>Entender por qué me dolió</h3>
+        <p>Recorre las cinco capas y llega a una frase que realmente reconozcas como cierta.</p>
       </div>
     </div>
   </div>
@@ -321,33 +319,33 @@
 <section class="privacy-band">
   <div class="wrap privacy-grid">
     <div>
-      <span class="kicker">Not a footnote</span>
-      <h2 class="display">Nothing you write ever leaves this phone.</h2>
-      <p class="lede">Most journaling apps are quietly becoming AI companions with a server behind them. MindOnion made the opposite bet.</p>
+      <span class="kicker">No es una nota al pie</span>
+      <h2 class="display">Nada de lo que escribes sale nunca de este teléfono.</h2>
+      <p class="lede">La mayoría de las apps de diario se están convirtiendo, en silencio, en compañeras de IA con un servidor detrás. MindOnion apostó justo por lo contrario.</p>
     </div>
     <div class="privacy-facts">
-      <div class="privacy-fact"><span class="check">•</span><div><p class="fact-title">No AI</p><p class="fact-body">Every question and prompt is fixed, human-written content. Nothing you write is ever sent to a model.</p></div></div>
-      <div class="privacy-fact"><span class="check">•</span><div><p class="fact-title">No server</p><p class="fact-body">There's nowhere for your data to go. It's not a promise about a database. There isn't one.</p></div></div>
-      <div class="privacy-fact"><span class="check">•</span><div><p class="fact-title">No account</p><p class="fact-body">Nothing to sign up for, nothing to lose the password to.</p></div></div>
-      <div class="privacy-fact"><span class="check">•</span><div><p class="fact-title">Yours to keep</p><p class="fact-body">Export everything to a file, anytime, and bring it back in later. Delete it permanently just as easily.</p></div></div>
+      <div class="privacy-fact"><span class="check">•</span><div><p class="fact-title">Sin IA</p><p class="fact-body">Cada pregunta y cada texto es contenido fijo, escrito de antemano por una persona. Nada de lo que escribes se envía nunca a un modelo.</p></div></div>
+      <div class="privacy-fact"><span class="check">•</span><div><p class="fact-title">Sin servidor</p><p class="fact-body">No hay ningún lugar al que puedan ir tus datos. No es una promesa sobre una base de datos, es que no existe ninguna.</p></div></div>
+      <div class="privacy-fact"><span class="check">•</span><div><p class="fact-title">Sin cuenta</p><p class="fact-body">Nada que registrar, ninguna contraseña que puedas perder.</p></div></div>
+      <div class="privacy-fact"><span class="check">•</span><div><p class="fact-title">Siempre tuyo</p><p class="fact-body">Exporta todo a un archivo cuando quieras, y vuelve a importarlo más tarde. Eliminarlo para siempre es igual de fácil.</p></div></div>
     </div>
-    <p class="privacy-closer">A service built to respect your privacy completely. No AI, not even a little. Just you, listening to what's actually going on inside.</p>
+    <p class="privacy-closer">Un servicio construido para respetar tu privacidad por completo. Nada de IA, ni siquiera un poco. Solo tú, escuchando lo que realmente ocurre por dentro.</p>
   </div>
 </section>
 
 <section class="section-border-top">
   <div class="wrap" style="display:grid; grid-template-columns: 1fr 1fr; gap:56px; align-items:center;">
     <div>
-      <span class="kicker">Vault &amp; Patterns</span>
-      <h2 class="display" style="font-size: clamp(26px,3.4vw,36px); margin:0 0 16px;">Not a diary of what happened.</h2>
-      <p style="color:var(--text-dim); font-size:16.5px; max-width:40ch; margin:0;">A map of what keeps happening, and what you keep needing, built from your own record, not a guess.</p>
+      <span class="kicker">Vault y Patrones</span>
+      <h2 class="display" style="font-size: clamp(26px,3.4vw,36px); margin:0 0 16px;">No es un diario de lo que pasó.</h2>
+      <p style="color:var(--text-dim); font-size:16.5px; max-width:40ch; margin:0;">Es un mapa de lo que se repite y de lo que sigues necesitando, construido a partir de tus propios registros, no de una suposición.</p>
     </div>
     <div class="mock-card">
-      <div class="mock-title">Then vs. now</div>
-      <div class="mock-label">On revisit, intensity dropped by an average of 3.4 points</div>
-      <div class="bar-row"><span class="bar-label">Then</span><div class="bar-track"><div class="bar-fill then" style="width:78%;"></div></div><span class="bar-value">7.8</span></div>
-      <div class="bar-row"><span class="bar-label">Now</span><div class="bar-track"><div class="bar-fill now" style="width:44%;"></div></div><span class="bar-value">4.4</span></div>
-      <div class="mock-example">Example data for illustration</div>
+      <div class="mock-title">Antes y ahora</div>
+      <div class="mock-label">Al revisar, la intensidad bajó en promedio 3.4 puntos</div>
+      <div class="bar-row"><span class="bar-label">Antes</span><div class="bar-track"><div class="bar-fill then" style="width:78%;"></div></div><span class="bar-value">7.8</span></div>
+      <div class="bar-row"><span class="bar-label">Ahora</span><div class="bar-track"><div class="bar-fill now" style="width:44%;"></div></div><span class="bar-value">4.4</span></div>
+      <div class="mock-example">Datos de ejemplo, solo ilustrativos</div>
     </div>
   </div>
 </section>
@@ -357,8 +355,8 @@
     <div class="safety-card">
       <div class="safety-icon"><div class="dot"></div></div>
       <div>
-        <h3>A quiet safety net, built in</h3>
-        <p>If something you write suggests you might be in crisis, MindOnion shows you free, confidential support resources for your language. Never a diagnosis, never a blocker, just there if it's needed.</p>
+        <h3>Una red de seguridad silenciosa, integrada</h3>
+        <p>Si algo que escribes sugiere que podrías estar en crisis, MindOnion te muestra recursos de apoyo gratuitos y confidenciales para tu idioma. Nunca es un diagnóstico, nunca es un obstáculo, solo está ahí por si hace falta.</p>
       </div>
     </div>
   </div>
@@ -366,7 +364,7 @@
 
 <section class="section-border-top">
   <div class="wrap">
-    <span class="kicker" style="text-align:center; display:block;">Available in five languages at launch</span>
+    <span class="kicker" style="text-align:center; display:block;">Disponible en cinco idiomas desde el lanzamiento</span>
     <div class="lang-grid">
       <div class="lang-card"><div class="lang-name">English</div><div class="lang-phrase">Your hurt deserves to be understood.</div></div>
       <div class="lang-card"><div class="lang-name">日本語</div><div class="lang-phrase">あなたの痛みは、理解されるべきものです。</div></div>
@@ -379,46 +377,46 @@
 
 <section class="section-border-top">
   <div class="narrow pullquote">
-    <span class="kicker" style="display:block; text-align:center;">One way to think about it</span>
-    <p class="display">Maybe that's what loving yourself really is: understanding what you feel, all the way through, and accepting it.</p>
-    <p class="attribution">Once you do, the feeling finally belongs to you.</p>
+    <span class="kicker" style="display:block; text-align:center;">Una forma de verlo</span>
+    <p class="display">Quizás eso es lo que significa quererte de verdad: entender lo que sientes, hasta el final, y aceptarlo.</p>
+    <p class="attribution">Cuando lo haces, ese sentimiento por fin te pertenece.</p>
   </div>
 </section>
 
 <section class="section-border-top" id="pricing">
   <div class="wrap" style="text-align:center;">
-    <span class="kicker">Pricing</span>
-    <h2 class="display" style="font-size: clamp(26px,3.4vw,36px); margin:0;">One payment. No subscription, ever.</h2>
+    <span class="kicker">Precio</span>
+    <h2 class="display" style="font-size: clamp(26px,3.4vw,36px); margin:0;">Un solo pago. Sin suscripción, nunca.</h2>
 
     <div class="pricing-card">
-      <div class="mono" style="color:var(--text-faint); font-size:12.5px; letter-spacing:0.05em; text-transform:uppercase;">Lifetime access</div>
+      <div class="mono" style="color:var(--text-faint); font-size:12.5px; letter-spacing:0.05em; text-transform:uppercase;">Acceso de por vida</div>
       <div class="price">$19.99</div>
-      <div class="price-note">once, not per month, not per year</div>
+      <div class="price-note">una sola vez, ni al mes ni al año</div>
       <ul class="pricing-list">
-        <li><span class="mark">•</span> Unlimited entries in your Vault</li>
-        <li><span class="mark">•</span> Patterns: see what keeps coming up</li>
-        <li><span class="mark">•</span> Revisit: check back on how things feel now</li>
+        <li><span class="mark">•</span> Entradas ilimitadas en tu Vault</li>
+        <li><span class="mark">•</span> Patrones: ve lo que se repite</li>
+        <li><span class="mark">•</span> Revisión: comprueba cómo te sientes ahora</li>
       </ul>
-      <a class="btn-primary" href="mailto:themindonion@gmail.com?subject=Notify%20me%20when%20MindOnion%20launches" style="width:100%;">Get notified at launch</a>
-      <div class="pricing-free">The full core loop (writing, exploring, naming what really hurt, saving up to 3 entries) is free, always. Privacy and deletion tools are never paywalled.</div>
+      <a class="btn-primary" href="mailto:themindonion@gmail.com?subject=Notify%20me%20when%20MindOnion%20launches" style="width:100%;">Avísenme cuando esté disponible</a>
+      <div class="pricing-free">El ciclo completo (escribir, explorar, nombrar lo que realmente dolió, guardar hasta 3 entradas) es gratis, siempre. Las herramientas de privacidad y eliminación nunca están detrás de un pago.</div>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <p class="footer-question">When was the last time you really listened to what's going on inside you?</p>
+    <p class="footer-question">¿Cuándo fue la última vez que escuchaste de verdad lo que pasa dentro de ti?</p>
     <div class="footer-row">
       <div>
         <div class="brand"><div class="brand-mark"></div><div class="brand-name">MindOnion</div></div>
-        <p class="footer-tagline">Peel back the feeling. Find what really hurt.</p>
+        <p class="footer-tagline">Pela la capa del sentimiento. Descubre qué te dolió de verdad.</p>
       </div>
       <div class="footer-links">
-        <a href="https://q1-in-dublin.github.io/mindonion-legal/">Privacy Policy</a>
-        <a href="mailto:themindonion@gmail.com">Contact</a>
+        <a href="https://q1-in-dublin.github.io/mindonion-legal/">Política de privacidad</a>
+        <a href="mailto:themindonion@gmail.com">Contacto</a>
       </div>
     </div>
-    <p class="footer-note">MindOnion has no server, so this page can't tell you anything about yourself. It can only tell you about the app.</p>
+    <p class="footer-note">MindOnion no tiene servidor, así que esta página no puede decirte nada sobre ti. Solo puede hablarte de la app.</p>
   </div>
 </footer>
 
@@ -432,5 +430,4 @@
   steps.forEach(function (s) { io.observe(s); });
 </script>
 
-</body>
-</html>
+</body></html>

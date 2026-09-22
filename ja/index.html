@@ -66,6 +66,11 @@
   .lang-switch a { font-size: 12.5px; font-family: "IBM Plex Mono", monospace; color: var(--text-faint); text-decoration: none; border: 1px solid var(--border); border-radius: 20px; padding: 6px 12px; white-space: nowrap; }
   .lang-switch a.current { color: var(--warm); border-color: var(--accent-line); }
   .lang-switch a:hover { color: var(--text); }
+  @media (max-width: 640px) {
+    nav.top .row { justify-content: center; }
+    .brand { justify-content: center; }
+    .lang-switch { justify-content: center; }
+  }
   @media (max-width: 480px) {
     nav.top .row { padding: 12px 16px; }
     .lang-switch { gap: 6px; }
